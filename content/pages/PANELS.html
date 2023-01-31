@@ -1,0 +1,378 @@
+<!-- Here's a custom method for page and lesson completion if needed programmatically -->
+<script>
+// set the page completie
+var page = rebus.navigation.getPage();
+rebus.stateHelper.setPageAsComplete(page).save();
+// set the course as completed
+Track.setLessonCompleted();
+</script>
+<!-- button to mark course complete -->
+<button type="button" class="button button-default" data-navigate="current-module-menu" data-mark-course-as-complete>Topic menu</button>
+<!-- full width banner -->
+<header id="page-header">
+    <img src="content/images/aspect-ratio.png" alt="" />
+    <div class="container">
+        <h1 class="animate__animated animate__fadeInLeft">What is Introduction to Critical Risks ?</h1>
+    </div>
+</header>
+<div class="horizontal-panels">
+    <!-- bg-white text container -->
+    <section class="panel bg-white">
+        <div class="container">
+            <h3>{bg-white}</h3>
+            <div class="audio-control mb-3" data-audio-file="AUDIO_PLACEHOLDER"></div>
+            <div class="row">
+                <div class="col-md-6">{LEFT}</div>
+                <div class="col-md-6">{RIGHT}</div>
+            </div>
+        </div>
+    </section>
+    <!-- bg-shade-6 text container -->
+    <section class="panel bg-shade-6">
+        <div class="container">
+            <h3>{bg-shade-6}</h3>
+            <div class="audio-control mb-3" data-audio-file="AUDIO_PLACEHOLDER"></div>
+            <div class="row">
+                <div class="col-md-6">{LEFT}</div>
+                <div class="col-md-6">{RIGHT}</div>
+            </div>
+        </div>
+    </section>
+    <!-- bg-shade-2 text container -->
+    <section class="panel bg-shade-2">
+        <div class="container">
+            <h3>{bg-shade-2}</h3>
+            <div class="audio-control mb-3" data-audio-file="AUDIO_PLACEHOLDER"></div>
+            <div class="row">
+                <div class="col-md-6">{LEFT}</div>
+                <div class="col-md-6">{RIGHT}</div>
+            </div>
+        </div>
+    </section>
+    <!-- ACTIVITY: flip card container -->
+    <section class="panel bg-white">
+        <div class="container">
+            <div class="audio-control mb-3" data-audio-file="AUDIO_PLACEHOLDER"></div>
+            <h3>{flipcards}</h3>
+            <p><strong class="action">Select</strong> each card to learn more.</p>
+            <ul data-activity="flip-cards" data-mandatory="true" class="show-flip-icon-reverse" data-card-width="255px" data-card-height="276px">
+                <li>
+                    <div class="d-flex flex-column justify-content-end align-items-end">
+                        <p>{font}</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <p>{back}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex flex-column justify-content-end align-items-end">
+                        <p>{font}</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <p>{back}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex flex-column justify-content-end align-items-end">
+                        <p>{font}</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <p>{back}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex flex-column justify-content-end align-items-end">
+                        <p>{font}</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <p>{back}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- ACTIVITY: click reveal container -->
+    <section class="panel bg-white pt-0 px-0">
+        <div class="container">
+            <h3>{click-and-reveal}</h3>
+            <div data-activity="click-and-reveal" data-reveal-type="expand" data-reveal-in-order="true"
+                data-mandatory="true">
+                <ul>
+                    <li>
+                        <button type="button" class="btn-reveal one" data-reveal=".reveal.one">
+                            <span>{click}</span>
+                        </button>
+                        <div class="reveal one">
+                            <p>{reveal}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" class="btn-reveal one" data-reveal=".reveal.two">
+                            <span>{click}</span>
+                        </button>
+                        <div class="reveal two">
+                            <p>{reveal}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" class="btn-reveal one" data-reveal=".reveal.three">
+                            <span>{click}</span>
+                        </button>
+                        <div class="reveal three">
+                            <p>{reveal}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" class="btn-reveal one" data-reveal=".reveal.four">
+                            <span>{click}</span>
+                        </button>
+                        <div class="reveal four">
+                            <p>{reveal}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- ACTIVITY: click buttons - Modal -->
+    <section class="panel">
+        <div class="container">            
+            <ul class="click-btns" data-activity="click-btns" data-mandatory="true">
+              <div class="aitem">
+                    <button class="click-btn" type="button">
+                        <span><span>1</span></span>
+                        <svg class="done-indicator" role="img" aria-label="Done" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15.5 12.5">
+                            <use href="content/images/icons.svg#icon-tick" xlink:href="content/images/icons.svg#icon-tick" />
+                        </svg>
+                    </button>
+                    <div class="modal">
+                        <h1>{title}</h1>
+                        <div class="audio-control mb-3" data-audio-file="AUDIO_PLACEHOLDER"></div>
+                        <p>{body}</p>
+                    </div>
+                </div>           
+                
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!-- VIDEO -->
+    <section class="panel bg-white">
+        <div class="container">
+            <div class="video" data-transcript="bbb" data-activity="video" data-mandatory="true">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <video controlsList="nodownload" src="content/video/{video}.mp4" controls="controls"
+                    poster="content/video/{video}.jpg">
+                    <track kind="subtitles" label="English subtitles" src="content/video/{video}.vtt" srclang="en" default />
+                  </video>
+                </div>
+              </div>
+        </div>
+    </section>
+    <!-- ACTIVITY: multiple choice quiz container -->
+    <section class="panel bg-shade-6 pb-0">
+        <img class="d-block d-sm-none w-100" src="content/images/examples/person-working-in-a-parcel-sorting-facility.jpg"
+            alt="">
+        <div class="container">
+            <h3 class="text-primary">{multiple-choice-quiz}</h3>
+            <div class="audio-control mb-3" data-audio-file="AUDIO_PLACEHOLDER"></div>
+            <p>{question setup}</p>
+            <form class="multiple-choice-quiz" data-activity="multiple-choice-quiz" data-type="radio"
+                data-mandatory="partial" data-append-response-to="#bucket-1" data-submit="Submit">
+                <div class="row">
+                    <div class="col-12 pt-5">
+                        <p>{questions}</p>
+                        <p><strong class="action">Select</strong> the best answer, then <strong
+                                class="action">Select</strong> Submit.</p>
+                    </div>
+                </div>
+                <div class="row qandf pt-3">
+                    <div class="col-sm-6 pb-5">
+                        <ul class="multiple-choice-quiz-options">
+                            <li>{incorrect option}</li>
+                            <li>{incorrect option}</li>
+                            <li data-required="true">{correct option}</li>
+                            <li>{incorrect option}</li>
+                            <li>{incorrect option}</li>
+                        </ul>
+                        <div data-response="correct">
+                            <p><strong>{correct}</strong></p>
+                            <div class="audio-control mb-3" data-audio-file="AUDIO_PLACEHOLDER"></div>
+                            <p>{feedback}</p>
+                        </div>
+                        <div data-response="incorrect">
+                            <p><strong>{correct}</strong></p>
+                            <div class="audio-control mb-3" data-audio-file="AUDIO_PLACEHOLDER"></div>
+                            <p>{feedback}</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 dark-bg" id="bucket-1"></div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- ACTIVITY: accordion container -->
+    <section data-activity="accordion" data-mandatory="true" class="accordion reduced-padding" id="informal-and-formal">
+        <div class="container">
+            <div class="card" role="tab">
+                <h2 class="card-header">
+                    <button class="btn btn-link btn-block text-left" type="button">
+                        <span>Informal risk assessment</span>
+                    </button>
+                </h2>
+                <div>
+                    <div class="card-body">
+                        <div>
+                            <p><strong>Informal risk assessment</strong></p>
+                        <ul>
+                            <li>Appropriate for low level risks or known risks with established and accepted control measures.</li>
+                            <li>Can be done in your head or as part of a conversation.</li>
+                            <li>May not always be documented.</li>
+                            <li>Address the hazard or risk by immediately taking action.</li>
+                            <li>Encourages us to Pause, Breathe and RESET and take time to stop, think, and consider the situation before acting.</li>
+                            <li>Go-See walks.</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" role="tab">
+                <h2 class="card-header">
+                    <button class="btn btn-link btn-block text-left" type="button">
+                        <span>Formal risk assessment</span>                 
+                    </button>
+                </h2>
+                <div>
+                    <div class="card-body">
+                        <div>
+                            <p><strong>Formal risk assessment</strong></p>
+                        <ul>
+                            <li>Required when a hazard or risk is more complex or does not have established and accepted control measures that can eliminate the hazard.</li>
+                            <li>Risk assessment tools and templates are available to help site managers assess specific risks such as manual tasks and Floor Traffic Management Plans.</li>
+                            <li>Complex risk assessments must be led by a suitably capable AP employee or delegate, such as a safety specialist.</li>
+                            <li>Must be documented.</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ACTIVITY: carousel container -->
+    <section class="panel bg-white">
+        <div class="container">
+            <h2>What kinds of animals can attack? </h2>
+            <p><strong>Select</strong> the arrows to learn about the most common animals you need to be aware of at work.</p>
+            <p>Have you ever encountered any of these?</p>
+            <div data-activity="carousel" class="carousel slide" id="carousel-1" data-interval="false"
+                data-mandatory="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row no-gutters">
+                            <div class="col-12 bg-secondary text-white px-4 pt-4">
+                                <img class="w-100" src="content/images/t1/t1_s1_p2a.jpg" />
+                                <h3>Unrestrained dogs</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row no-gutters">
+                            <div class="col-sm-6 bg-secondary text-white px-4 pt-4">
+                                <img class="w-100" src="content/images/t1/t1_s1_p2b.jpg" />
+                                <h3>Domestic animal entering the roadway</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row no-gutters">
+                            <div class="col-sm-6 bg-secondary text-white px-4 pt-4">
+                                <img class="w-100" src="content/images/t1/t1_s1_p2c.jpg" />
+                                <h3>Biting and stinging insects</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row no-gutters">
+                            <div class="col-sm-6 bg-secondary text-white px-4 pt-4">
+                                <img class="w-100" src="content/images/t1/t1_s1_p2d.jpg" />
+                                <h3>Swooping birds</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row no-gutters">
+                            <div class="col-sm-6 bg-secondary text-white px-4 pt-4">
+                                <img class="w-100" src="content/images/t1/t1_s1_p2e.jpg" />
+                                <h3>Snakes</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row no-gutters">
+                            <div class="col-sm-6 bg-secondary text-white px-4 pt-4">
+                                <img class="w-100" src="content/images/t1/t1_s1_p2f.jpg" />
+                                <h3>Wild or farm animals entering the roadway</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls outer-nav d-flex justify-content-between">
+                    <button type="button" class="btn btn-primary" data-target="#carousel-1" data-slide="prev" aria-label="Previous" aria-disabled="false">
+                        <span>
+                            <svg focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.3 17.6">
+                                <use href="content/images/icons.svg#icon-carousel-nav-left" xlink:href="content/images/icons.svg#icon-carousel-nav-left"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-1" data-slide-to="1"></li>
+                        <li data-target="#carousel-1" data-slide-to="2"></li>
+                        <li data-target="#carousel-1" data-slide-to="3"></li>
+                        <li data-target="#carousel-1" data-slide-to="4"></li>
+                        <li data-target="#carousel-1" data-slide-to="5"></li>
+                    </ol>
+                    <button type="button" class="btn btn-primary" data-target="#carousel-1" data-slide="next" aria-label="Next" aria-disabled="false">
+                        <span>
+                            <svg focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.3 17.6">
+                                <use href="content/images/icons.svg#icon-carousel-nav-right" xlink:href="content/images/icons.svg#icon-carousel-nav-right"></use>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- key message container -->
+    <section class="panel key-message with-qmark-start">
+        <div class="all">
+            <div class="container">
+                <blockquote class="bquote" data-detect-when-in-view="bquote" data-transition-type="animate__rubberBand">
+                    {key-message}</blockquote>
+            </div>
+        </div>
+    </section>
+    <!-- key message (large) container -->
+    <section class="panel key-message key-message-lg with-qmark-start">
+        <div class="all">
+            <div class="container">
+                <blockquote class="bquote" data-detect-when-in-view="bquote" data-transition-type="animate__rubberBand">
+                    {key-message-lg}</blockquote>
+            </div>
+        </div>
+    </section>
+    <!-- final panel container -->
+    <section class="panel bg-primary final-panel">
+        <a name="anchor-1"></a>
+        <div class="container text-center text-white">
+            <div class="audio-control mb-3 mx-auto" data-audio-file="AUDIO_PLACEHOLDER"></div>
+            <p>{bg-primary final-panel}</p>
+            <button type="button" data-complete="page" data-navigate="next"
+                class="btn btn-primary mt-3"><span>Continue</span></button>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+	<title>Audio</title>
+	<style>.fill{ background: currentColor; }</style>
+	<g transform="translate(-435.865 -691.625)">
+		<circle cx="16" cy="16" r="16" transform="translate(435.865 691.625)" stroke="none"/>
+		<path d="M5748.548,726.258v6.517l6.288,3.833V719.623l-6.288,4.4h-5.712v8.753h5.712" transform="translate(-5300.627 -20.353)" fill="none" stroke-linejoin="round" stroke-width="2"/>
+		<path d="M5781.467,734.68s4.044,2.733,0,6.159" transform="translate(-5324.622 -29.706)" fill="none" stroke-width="2"/>
+		<path d="M5783.838,726.746s8.855,5.731,0,11.955" transform="translate(-5326.095 -24.778)" fill="none" stroke-width="2"/>
+  	</g>
+</svg>

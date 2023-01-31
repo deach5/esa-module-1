@@ -1,0 +1,82 @@
+.panel
+{
+    /* :not(.lock-overlay):not(.text-center)  p:not(.text-center) { max-width: 41rem; } */
+    padding: 25px 0 25px 0;
+
+    &.xl
+    {
+        padding: 25px 0 25px 0;
+    }
+
+    @media (min-width: 576px)
+    {
+        padding: 25px;
+
+        &.xl {
+            padding: 25px;
+            position: relative;
+        }
+
+        &.less-h {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        &.less-r {
+            padding-right: 10px;
+        }
+    }
+
+    @media (min-width: 768px)
+    {
+        padding: 45px 65px 45px 65px;
+
+        &.xl {
+            padding: 60px 115px;
+        }
+
+        &.less-h, 
+        &.xl.less-h {
+            padding-left: 30px;
+        }
+
+        &.less-h, 
+        &.less-r {
+            padding-right: 30px;
+        }
+
+        &.xl {
+            &.less-h, 
+            &.less-r {
+                padding-right: 30px;
+            }
+        }
+    }
+
+
+    @media (min-width: 992px)
+    {
+        padding: 45px 115px 45px 125px;
+
+        &.xl {
+            padding: 60px 230px;
+        }
+
+        &.less-h, 
+        &.xl.less-h {
+            padding-left: 50px;
+        }
+
+        &.less-h, 
+        &.less-r {
+            padding-right: 50px;
+        }
+
+        &.xl {
+            &.less-h, 
+            &.less-r {
+                padding-right: 50px;
+            }
+        }
+    }
+}

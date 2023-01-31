@@ -1,0 +1,137 @@
+/**************************************************************************************************************************
+GLOBAL
+***************************************************************************************************************************/
+
+[hidden] { 
+    display: none !important; 
+}
+
+/* In an iframe, if there's a scrollable container with [width: 100%; max-width: px] then iPhone will not restrict the width unless an ancestor
+is given an explicit size. 100% is no good. */
+html.isApp, 
+.isApp body {
+    width: 99vw;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -ms-overflow-style: scrollbar;
+    background:#FFF;
+    width: 100%;
+    font-size: 1.125rem;
+}
+/* Make the body clickable in iOS so that the menu can be closed */
+.iOS body {
+    cursor: pointer;
+}
+
+img[usemap],
+map area {
+    outline: 0;
+}
+
+a.email-link, 
+a.underlined-link { 
+    text-decoration: underline; 
+    color: #0000ff; 
+}
+
+
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #383838 !important;
+}
+
+:-moz-placeholder {
+    color: #383838 !important;
+}
+
+::-moz-placeholder {
+    color: #383838 !important;
+}
+
+:-ms-input-placeholder {
+    color: #383838 !important;
+}
+
+legend > span {
+    display: block;
+    margin: 0 0 10px;
+}
+
+legend {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.keyboard-nav *:focus,
+.keyboard-nav a:focus,
+.keyboard-nav input[type="file"]:focus,
+.keyboard-nav input[type="radio"]:focus,
+.keyboard-nav input[type="checkbox"]:focus,
+.keyboard-nav .btn:focus,
+.keyboard-nav .btn:active:focus,
+.keyboard-nav .btn.active:focus,
+.keyboard-nav .btn.focus,
+.keyboard-nav .btn.active.focus,
+.keyboard-nav .focussed {
+    outline: 2px solid red;
+    outline-offset: 2px;
+}
+
+.keyboard-nav .focussed-pseudo:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 2px solid red;
+}
+
+body:not(.keyboard-nav) *:focus { outline: none; }
+
+button, 
+[role="button"] {
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $dark;
+
+    &.light{
+        font-family: $light-font-family;
+    }
+}
+
+h1,.h1{
+    font-size: 3.15rem;
+}
+h2,.h2{
+    font-size: 1.8rem;
+}
+h3,.h3{
+    font-size: 1.6rem;
+}
+h4,.h4{
+    font-size: 1.5rem;
+}
+

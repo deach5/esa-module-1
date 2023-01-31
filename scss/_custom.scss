@@ -1,0 +1,93 @@
+
+h2.dev-note{
+    font-size: 1rem;
+    background-color: rgb(149, 6, 6);
+    color: white;
+}
+#page-m1_t1_p1
+{
+
+    .drag-and-drop
+    {
+        .drag-drop-reveal{
+            display: none;
+        }
+        .draglets
+        {
+            
+            min-height: 190px;
+            position:relative;
+            .dragheading{
+                text-align: center;
+                background-color: #fff;
+                height: 20px;;
+                width: 100%;
+                position:absolute;
+                font-weight: bold;
+                z-index: 0;
+
+
+            }
+            .draglet
+            {
+                
+                background-color:rgb(240, 240, 240);
+                border:2px solid $apg-shade-6;
+                padding:.5rem;                
+                width: calc(100% - 1rem);
+                height:152px;
+                position:absolute;
+                text-align: center;
+                justify-content: center ;
+                align-items: center;
+                top:36px;;
+                left:.5rem;                
+                z-index:1;
+                overflow: hidden;
+                &.ui-draggable-disabled.hidden
+                {
+                    display: none !important;
+                }
+                &:not(.ui-draggable-disabled)
+                {
+                    cursor:pointer;
+                }
+                &.drag-done{
+              
+                }
+                p{
+                    margin-bottom: 0;
+                }
+              
+            }
+        }
+     
+            .droplet
+            {
+                display: flex;
+                justify-content: center ;
+                align-items: center;          
+                min-height:180px;
+                padding: 1rem;                               
+                background-color: $apg-shade-2;                
+                box-shadow: 2px 2px 0px $apg-shade-6;
+                margin: .5rem;;
+                width: calc(100% - 1rem);
+                
+                
+                &.ui-droppable-hover
+                {
+                    background-color:rgb(154, 207, 223);
+                }           
+                .dropHeading
+                {                                    
+                    
+                    color:#fff;
+                    font-family: $light-font-family;
+                    text-align: center;
+                   
+                }           
+            }
+        
+    }
+}

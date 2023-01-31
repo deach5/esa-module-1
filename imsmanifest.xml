@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.6 SCORM 1.2 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-0E91B8E3A53DBB3ED7E95C495E0BA58F_ESA_M1_20220828" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-59AF50EFEF6F5E903DED57EC9BDF5C05_ESA_M1_20220828">
+    <organization identifier="ORG-59AF50EFEF6F5E903DED57EC9BDF5C05_ESA_M1_20220828" structure="hierarchical">
+      <title>ESA - Explicit Teaching - What is explicit teaching?</title>
+      <item identifier="ITEM-A717DA0B030DF71079FF822D041E68F4_ESA_M1_20220828" identifierref="RES-57FF2218D5B67AD294B02C96279DC45D_ESA_M1_20220828" isvisible="true">
+        <title>Launch</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-57FF2218D5B67AD294B02C96279DC45D_ESA_M1_20220828" type="webcontent" href="index.html" adlcp:scormtype="sco">
+      <file href="index.html" />
+    </resource>
+  </resources>
+</manifest>

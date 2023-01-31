@@ -1,0 +1,230 @@
+// Grid breakpoints and container widths
+
+@mixin mixin-dropshadow {
+  box-shadow: 20px 20px 0px $apg-shade-3;
+}
+@mixin mixin-dropshadow-dark {
+  box-shadow: 20px 20px 0px $apg-shade-1;
+}
+@mixin mixin-dropshadow-invert {
+  box-shadow: 20px -20px 0px 0px $apg-shade-3;
+}
+@mixin mixin-dropshadow-dark-invert {
+  box-shadow: 20px -20px 0px 0px $apg-shade-1;
+}
+
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 100%,
+  lg: 1024px,
+  // xl: 980px
+);
+
+// Custom spacing
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 2),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
+
+/* Colours
+$blue:    #007bff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+
+$teal:    #20c997;
+$cyan:    #17a2b8;
+*/
+$green:   #28a745;
+
+$apg-shade-1: #0E1D42;
+$apg-shade-2: #2B78AB;
+$apg-shade-3: #4DB4F2;
+$apg-shade-4: #F7D880;
+$apg-shade-5: #E79449;
+$apg-shade-6: #E16E30;
+$apg-shade-7: #000000;
+$apg-shade-8: #5B5B5B;
+$apg-shade-9: #ac3838;
+
+
+$primary: #0E1D42;
+$secondary: #2B78AB;
+$lock-overlay-color: rgba($primary, 0.98);
+
+$light: #fff;
+$dark: #2B2B2B;
+$body-color: $dark;
+$masthead-bg: #fff;
+$dropdown-bg: #fff;
+$dropdown-color: $primary;
+
+$mcq-bg: $primary;
+$mcq-color: #fff;
+$mcq-border-color: $mcq-bg;
+$mcq-solid-bg: $apg-shade-3;
+$mcq-solid-color: #000;
+$mcq-solid-active-bg: $apg-shade-3;
+$mcq-solid-active-color: $primary;
+$mcq-solid-grid-bg: $green;
+$mcq-icon-fill: #005198;
+$mcq-panel-light: #F7F7F7;
+$mcq-panel-dark: $apg-shade-1;
+$font-size-base:  1.125rem; // 23px in designs
+$lead-font-weight: 600;
+// heading sizes are proportional to font-size-base
+// see comment for calc based on vals from designs
+$h1-font-size: $font-size-base * 2.8; // 66/23 = 2.869565217391304
+$h2-font-size: $font-size-base * 1.8; // 51/23 = 2.217391304347826
+$h3-font-size: $font-size-base * 2.25; // 31/23 = 1.3478260869565217
+$h4-font-size: $font-size-base * 1.25; // not in designs
+$h5-font-size: $font-size-base * 1.15; // not in designs
+$h6-font-size: $font-size-base;
+$headings-font-weight: normal;
+$headings-color: $apg-shade-1;
+$key-msg-font-size: $font-size-base * 2.2;//1.78; // 41/23 = 1.7826086956521738
+// fams
+$font-family-sans-serif:  'Client Font Roboto';
+$headings-font-family: 'Client Font Manrope';
+$light-font-family: 'Client Font Manrope Light';
+
+
+// buttons
+$btn-padding-y:   0.91rem; // 21/23 = 0.9130434782608695
+$btn-padding-x:   1.43rem; // 33/23 = 1.434782608695652
+$btn-font-size:   1.09rem; // 25/23 = 1.0869565217391304
+$btn-font-weight: bold;
+$border-radius: 0; //set so we have square buttons and other elements
+$border-radius-sm: 0.4rem;
+$border-radius-lg: 1rem;
+
+//Numbers (for auto class names)
+$number-of-modules: 20;
+$max-number-of-topics: 20;
+
+// Icons (this can be done better...
+$main-light-top: -56px;
+$main-dark-top: -8px;
+
+$resources-light-top: -57px;
+$resources-dark-top:-6px;
+
+$help-light-top: -54px;
+$help-dark-top: -3px;
+
+$video-light-top: -54px;
+$video-dark-top: 0;
+
+$topics-light-top: -54px;
+$topics-dark-top:-3px;
+
+$exit-light-top: -54px;
+$exit-dark-top: -3px;
+
+$progress-light-top: -54px;
+$progress-dark-top: -3px;
+
+// ...especially this bit)
+$glossary-dark-image: url('../images/theme/icons/icon_glossary.svg');
+$glossary-light-image: url('../images/theme/icons/icon_glossary_white.svg');
+
+
+// Auto generated
+$main-top: 0;
+$main-hover-top: 0;
+$resources-top: 0;
+$resources-hover-top: 0;
+$help-top: 0;
+$help-hover-top: 0;
+$video-top: 0;
+$video-hover-top: 0;
+$topics-top: 0;
+$topics-hover-top: 0;
+$exit-top: 0;
+$exit-hover-top: 0;
+$progress-top: 0;
+$progress-hover-top: 0;
+$glossary-image: url('');
+$glossary-hover-image: url('');
+
+
+$primary-text-colour: #FFF;
+$primary-text-hover-colour: #000;
+
+@if (lightness($primary) > 50) {
+    $primary-text-colour: #000;
+    $primary-text-hover-colour: #000;
+    
+    // sprites
+    $main-top:              $main-dark-top;
+    $main-hover-top:        $main-light-top;
+    $resources-top:         $resources-dark-top;
+    $resources-hover-top:   $resources-light-top;
+    $help-top:              $help-dark-top;
+    $help-hover-top:        $help-light-top;
+    $video-top:             $video-dark-top;
+    $video-hover-top:       $video-light-top;
+    $topics-top:            $topics-dark-top;
+    $topics-hover-top:      $topics-light-top;
+    $exit-top:              $exit-dark-top;
+    $exit-hover-top:        $exit-light-top;
+    $progress-top:          $progress-dark-top;
+    $progress-hover-top:    $progress-light-top;
+    $glossary-image:        $glossary-dark-image;
+    $glossary-hover-image:  $glossary-light-image;
+
+
+} @else {
+    $main-text-colour: #FFF;
+    $main-text-hover-colour: #FFF;
+
+    // sprites
+    $main-top:              $main-light-top;
+    $main-hover-top:        $main-dark-top;
+    $resources-top:         $resources-light-top;
+    $resources-hover-top:   $resources-dark-top;
+    $help-top:              $help-light-top;
+    $help-hover-top:        $help-dark-top;
+    $video-top:             $video-light-top;
+    $video-hover-top:       $video-dark-top;
+    $topics-top:            $topics-light-top;
+    $topics-hover-top:      $topics-dark-top;
+    $exit-top:              $exit-light-top;
+    $exit-hover-top:        $exit-dark-top;
+    $progress-top:          $progress-light-top;
+    $progress-hover-top:    $progress-dark-top;
+    $glossary-image:        $glossary-light-image;
+    $glossary-hover-image:  $glossary-dark-image;
+}
+
+  //tooltip
+  $tooltip-opacity:1; 
+  $tooltip-bg:$apg-shade-2;
+  $tooltip-arrow-color:$apg-shade-2;
+  $tooltip-padding-y:10px;
+  $tooltip-padding-x:10px;
+  $tooltip-color:#fff;
+  $tooltip-border-radius:0;
+  $tooltip-arrow-height:10px;
+  $tooltip-arrow-width:20px;

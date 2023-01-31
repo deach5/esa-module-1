@@ -1,0 +1,108 @@
+/*
+MODAL
+*/
+
+/* Allow the button to wrap */
+.modal {
+    top: 80px;
+    height: calc(100% - 80px);
+
+    &.modal-template{
+        &.modal-large{
+            .modal-dialog{
+                width: 100%;
+            }
+        }
+    }
+    
+    .modal-content {
+        border-radius: $border-radius;
+    }
+
+    button {
+        white-space: normal;
+    }
+
+}
+
+@media (min-width: 1px) and (max-width: 767px) {
+    .modal-footer {
+        button {
+            display: block;
+            width: 100%;
+        }
+
+        .btn+.btn {
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+}
+
+/*
+PAGE NOT COMPLETE MODAL
+*/
+
+.page-not-complete-modal {
+    text-align: center;
+
+    .modal-body {
+        background: $primary;
+        color: #fff;
+    }
+}
+
+
+
+.modal-backdrop {
+    top: 80px;
+    background-color: $apg-shade-2;
+}
+
+.modal-backdrop.show {
+    opacity: 0.8;
+}
+
+
+.modal-dialog {    
+    margin-top: 40px;
+}
+
+
+@media (min-width: 992px) {
+
+    .modal-lg,
+    .modal-xl {
+        max-width: 980px;
+
+        .modal-body {
+            padding: 5rem;
+            padding-bottom: 3rem;
+
+            h2 {
+                font-family: "Client Font Manrope";
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 1279px) {
+    .modal-lg,
+    .modal-xl {
+      max-width: 1124px;
+    }
+    .modal-lg .modal-body,
+    .modal-xl .modal-body {
+      padding: 5rem;
+      padding-bottom: 3rem;
+    }
+    .modal-lg .modal-body h2,
+    .modal-xl .modal-body h2 {
+      font-family: "Client Font Manrope";
+      font-weight: normal;
+    }
+  }

@@ -1,0 +1,80 @@
+/*
+Locked Panel
+*/
+
+/* Without this, the overlay doesn't appear on small size */
+
+.locked-panel{
+    min-height: 300px;
+
+}
+
+.locked-panel .col-sm-12 {
+    float: left;
+    width: 100%;
+}
+.locked-panel ~ .locked-panel{
+        display: none;
+
+}
+
+.lock-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $lock-overlay-color;
+    color: #fff;
+    font-size: 205px;
+    font-size: 1.9rem;
+    line-height: 1.2;
+    text-align: center;
+    z-index: 999;
+}
+
+.locked-panel .lock-overlay {
+    display: block;
+}
+
+.lock-overlay > {
+    p {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    div {
+        display: inline-block;
+        width: 41px;
+        height: 58px;
+        background: url('../content/images/icons/locked-white.svg');
+        background-repeat: no-repeat;
+    }
+}
+/* hide all p tags in locked panel after first*/
+.locked-panel ~ .locked-panel p,
+.locked-panel ~ .locked-panel .padlock{
+    display: none;
+}
+
+.course-unlocked .locked-panel .lock-overlay {
+    display: none;
+}
+
+
+/*Change the lock message for first screen*/
+
+.first-page-lock-message,
+.lock-message {
+    display: none;
+}
+
+
+.topic-0-complete .lock-message {
+    display: block;
+}
+
+.module-0.topic-0 .first-page-lock-message {
+    display: block;
+}

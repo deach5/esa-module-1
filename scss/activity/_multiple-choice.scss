@@ -1,0 +1,655 @@
+/*
+Multiple Choice
+*/
+
+.panel{
+    &.question{
+        padding: 0;
+  }
+  }
+  
+  .multiple-choice-quiz
+  {
+    .instructions
+    {
+        .action
+        {
+            color: $primary;
+            font-weight: bold;
+          }
+      }
+    .question-header{
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+  
+    .response {
+        img {
+            display: none;
+            flex-shrink: 0;
+            width: 105.29px;
+            height: 108.29px;
+            margin-bottom: 15px; 
+        }
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+              }
+          }
+  
+    &.dark-light > div:last-of-type,
+    &.light-dark > div:first-of-type {
+      background: $mcq-panel-light;
+    }
+    
+    &.dark-light > div:first-of-type,
+    &.light-dark > div:last-of-type {
+      background: $mcq-panel-dark;
+      color: $white;
+          }
+    &.nothing-light > div:last-of-type {
+      background: #fff;
+      border: 2px solid #FFF;
+      }
+  
+    &[data-correct="true"] .response .icon-thumb-up,
+    &[data-correct="false"] .response .icon-thumb-down,
+    &[data-correct="partial"] .response .icon-think {
+        display: block; 
+      }
+  
+    &[data-correct="true"] .response-container,
+    &[data-correct="false"] .response-container,
+    &[data-correct="partial"] .response-container {
+        background-image: none !important;
+  }
+  
+  
+  }
+  
+  /* Padding required for the correct-indicator on v.small devices */
+  
+  .multiple-choice-quiz-options {
+    list-style: none;
+    padding: 0;
+    &.radio-list{
+        li{
+            &::after{
+                border-radius: 100%;
+            }
+        }
+
+    }
+
+
+      li {
+        position: relative;
+        display: block;
+        margin: 0 0 10px 0;
+        text-align: left;
+        padding: 0;
+        background-color: $apg-shade-1;  
+        color: #fff;
+        border: $apg-shade-1 solid 2px;  
+
+        &:hover{
+
+            border: $apg-shade-3 solid 2px;  
+
+        }
+
+
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top:calc(50% - 15px);
+            left: 15px;
+            height: 30px;
+            width: 30px;
+            border: #fff solid 5px;    
+            pointer-events: none;
+            background-color: #fff ;           
+        }
+        &.checked {
+         //   background-color: $apg-shade-3;
+            &::after{
+                background-color:$apg-shade-3;              
+            }        
+        }
+       
+        &.disabled
+        {
+            pointer-events: none;
+      }
+        &.inline {
+            clear: none;
+        }
+  
+      
+
+    }
+      input, 
+      label {
+          cursor: pointer;
+      }
+  
+      input {
+        opacity: 0;
+        position: relative;
+        top: 4px;
+        width: 20px;
+        margin: 0;
+        -webkit-appearance: none;
+          &[disabled] {
+              cursor: default;
+            color: grey;
+  
+              + label {
+                  cursor: default;
+              }
+  
+  
+              &:not(:checked) + label {
+                  color: grey;
+              }
+          }
+  
+          float: left;
+          margin: 8px 0 0 0;
+          position: relative;
+          left: -10000px;
+  
+          &:focus {
+              outline: none !important;
+          }
+      }
+  
+      label {
+        flex: 1;
+        position: relative; 
+        display: block;        
+        margin: 0;
+        padding: 1rem;
+        padding-left: 60px;
+      }
+  
+      .indicator {
+        display:none;
+          position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5px;
+        width: 20px;
+        height: calc(20px * 0.8064516129032258);
+        margin: 0;
+        > svg
+        {
+          position:absolute;
+          width: 20px;
+          height: calc(20px * 0.8064516129032258);
+        }
+    }
+    .correct-indicator{
+        display: none;
+        position: absolute;
+        left: -10px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+      }
+  }
+  
+  /*Option 2 (Coloured backgrounds)*/
+  
+  .quiz-option2 {
+      margin-top: 2rem;
+  
+      .multiple-choice-quiz-options {
+          label {
+              float: left;
+              margin: 7px 0 7px 31px;
+              max-width: 83%;
+          }
+  
+          .indicator {
+              overflow: hidden;
+              position: absolute;
+              top: 8px;
+              left: 13px;
+              width: 27px;
+              height: 27px;
+              margin: 2px 20px 0 0;
+          }
+      }
+  }
+  
+  .multiple-choice-quiz-options .indicator > img {
+      position: absolute;
+      left: 1px;
+      top: 0px;
+      display: block;
+      pointer-events: none;
+  }
+  
+  .multiple-choice-quiz .feedback-holder {
+      display: none;
+  }
+  
+  .activity-sortable-options {
+      padding: 0;
+  
+      li {
+          list-style: none inside none;
+          padding: 7px 20px;
+          background: rgba(255, 255, 255, 0.3);
+          margin: 5px 0;
+          line-height: 1.2;
+          max-width: 560px;
+          cursor: grab;
+      }
+  }
+  
+  .debug-enabled [data-required="true"] label{
+    position: relative;
+    &::after
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top: 10px solid red;
+        border-left: 10px solid red;
+    }
+  }
+  
+  .multiple-choice-quiz {
+    .btn-check-multi-choice-answer {
+      display: block;
+    }
+  }
+  
+  .assessment-question-panel .multiple-choice-quiz .btn-check-multi-choice-answer {
+      margin-left: 28px;
+  }
+  
+  .multiple-choice-quiz-options .correct-indicator {
+      display: none;
+      position: absolute;
+      left: -10px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+  
+      > img {
+          display: block;
+          width: 100%;
+      }
+  }
+  
+  .incorrect.show-answer {
+      .multiple-choice-quiz-options [data-required="true"] .correct-indicator {
+          display: block;
+      }
+  
+      &.multiple-choice-quiz .feedback-holder {
+          display: block;
+  
+          .assessment-feedback {
+              padding: 30px;
+              margin-left: 10px;
+              background: rgba(255, 0, 0, 0.3);
+          }
+      }
+  
+      &.correct.multiple-choice-quiz .feedback-holder .assessment-feedback {
+          background: rgba(0, 255, 0, 0.3);
+      }
+  }
+  
+  .feedback-title-correct, 
+  .feedback-title-incorrect {
+      display: none;
+  }
+  
+  .assessment-feedback > h2 {
+      &.feedback-title-correct, 
+      &.feedback-title-incorrect {
+          font-size: 18px;
+          font-size: 1.8rem;
+        font-weight: 600;
+      }
+  }
+  
+  .show-answer {
+      &.correct {
+          .feedback-title-correct {
+              display: block;
+          }
+  
+          .feedback-title-incorrect {
+              display: none;
+          }
+      }
+  
+      &.incorrect {
+          .feedback-title-correct {
+              display: none;
+          }
+  
+          .feedback-title-incorrect {
+              display: block;
+          }
+      }
+  }
+  
+  .keyboard-nav .multiple-choice-quiz-options .focussed-pseudo:before {
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    left: -3px;
+  }
+  
+  [data-activity="multiple-choice-quiz"] .triggers-input {
+      cursor: pointer;
+  }
+  
+  /* Checkbox */
+  
+  .quiz-brown .multiple-choice-quiz-options.checkbox-list li.checked .indicator > img {
+      left: -27px;
+  }
+  
+  .quiz-blue .multiple-choice-quiz-options.checkbox-list li.checked .indicator > img {
+      left: -55px;
+  }
+  
+  /* Radio */
+  
+  .multiple-choice-quiz-options.radio-list {
+      .indicator > img {
+          left: -84px;
+      }
+  
+      li.checked .indicator > img {
+          left: -112px;
+      }
+  }
+  
+  .quiz-blue .multiple-choice-quiz-options.radio-list li.checked .indicator > img {
+      left: -139px;
+  }
+  
+  /* Checkbox */
+  
+  .multiple-choice-quiz-options.checkbox-list li.checked .indicator > img {
+      left: -27px;
+  }
+  
+  .inline-feedback {
+      display: none;
+      float: left;
+      margin-top: 10px;
+  }
+  
+  .show-inline-feedback {
+      .multiple-choice-quiz-options li {
+          padding-right: 15px;
+      }
+  
+      li.checked {
+          color: #000;
+  
+          .inline-feedback {
+              display: block;
+          }
+      }
+  
+      .final-feedback {
+          display: block;
+          background-color: #A8CB6C;
+          padding: 7px 0 7px 15px;
+      }
+  }
+  
+  .multiple-choice-quiz-modal {
+  
+      .modal-dialog {
+          width: 50%;
+      }
+      .modal-footer {
+          border-top: none;
+      }
+  
+      .modal-body{
+          padding: 4rem;
+      }
+  
+      &.correct .modal-content {
+          background-color: #fff;
+          &::before{
+              content: "I";
+              display: block;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              background-color: green;
+              padding: 10px;
+              color: white;
+          }
+      }
+  
+      &.incorrect .modal-content {
+          background-color: #fff;
+          &::before{
+              content: "I";
+              display: block;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              background-color: red;
+              padding: 10px;
+              color: white;
+          }
+      }
+  }
+  
+  [data-activity="multiple-choice-quiz"] button {
+    margin: 10px 0 0 0;
+  }
+  
+  // @media (max-width: 767px) {
+  //     [data-activity="multiple-choice-quiz"] button {
+  //         display: block;
+  
+  
+  //     }
+  // }
+  
+  /*
+  Solid Background styles
+  
+  as in no checkboxes etc, just change bg colour to indicate state.
+  icons are however used to indicate pass/fail
+  
+  seems like it's somewhat similar in scope to .quiz-option2,
+  but that one seems incomplete...
+  */
+  .multiple-choice-quiz
+  {
+    &.show-answer
+    {
+      [data-required="true"]
+      {
+        > label
+        {
+          > span.indicator
+          {
+            display:block;
+          }
+        }
+      }
+    }
+    &.solid,
+    &.display-grid
+      {
+          .multiple-choice-quiz-options
+          {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+              li
+              {
+                  background: $mcq-solid-bg;
+                  color: $mcq-solid-color;
+  
+                // 30 / 23 = 1.3043478260869565
+                // 40 / 23 = 1.7391304347826086
+                // 80 / 23 = 3.4782608695652173
+                display: flex;
+                align-items: center;
+                flex-grow: 1;
+                flex-basis:100%;
+                background: $mcq-solid-grid-bg 0% 0% no-repeat padding-box;
+                padding:0; 
+                margin-bottom: 7px;
+                &:hover,
+                &:focus
+                {
+                    background: darken( $mcq-solid-grid-bg, 10% );
+                }
+  
+                  &.checked
+                  {
+                      background: $mcq-solid-active-bg;
+                      color: $mcq-solid-active-color;
+                  }
+  
+                  input
+                  {
+                      float: none;
+                      position: absolute;
+                  }
+  
+                  label
+                  {
+                      float: none;
+                    margin: 0;
+                    width: auto;
+                    padding: 1.30rem 1.74rem;
+                    padding-right: 3.48rem;
+                    width:100%;
+                    margin:0;
+                  }
+              }
+  
+              .indicator
+              {
+                  display: none;
+              }
+          }
+  
+          &.correct,
+          &.incorrect
+          {
+              .multiple-choice-quiz-options
+              {
+                  li
+                  {
+                      &.checked
+                      {
+                          &::after
+                          {
+                              position: absolute;
+                              top: .5rem;
+                              right: .5rem;
+                            width: 2.52rem;
+                            height: 2.52rem;
+                              display: block;
+                              content: "";
+                            background-image: data-url( "content/images/icons/cross-white.svg" ); //temp
+                              background-repeat: no-repeat;
+                              background-size: contain;
+                          }
+                      }
+                    // Removed because image missing and not used in this course
+                    // &[data-required="true"].checked
+                    // {
+                    //     &::after
+                    //     {
+                    //       background-image: data-url( "content/images/icons/tick-white.svg" );
+                    //     }
+                    // }
+                          }
+                      }
+                  }
+              }
+          }
+  /* flex box cards */
+  .multiple-choice-quiz.display-grid{
+    .multiple-choice-quiz-options{
+        flex-direction: row;   
+        li{  
+            margin-right:7px;
+            &.checked{
+      }
+        }
+        &.desk3{
+            li{
+                width: 100%;
+                flex-basis: 100%;
+                min-height:100px;
+            }
+            @media (min-width: 481px) and (max-width: 767px) {
+                li{
+                    width: 50%;
+                    flex-basis: calc(50% - 7px);
+                }
+            }
+            @media (min-width: 768px) {
+                li{
+                    width: 33%;
+                    flex-basis: calc(33% - 7px);  
+                }
+           }
+        }
+        label{
+            height:100%;
+            display:flex;
+            align-items:center;
+        }
+        &.has-icons{
+            label{
+                padding-right: 2.52rem
+            }
+            svg{
+                max-height: 50px;
+                margin-right: 1.5rem;
+                fill: $mcq-icon-fill !important;
+                stroke: transparent !important;
+            }
+            li{
+                &.checked{
+                    svg{
+                        fill: white !important;
+                        stroke: transparent !important;
+                    }
+                } 
+                &[data-required="true"].checked{
+                    &::after{
+                        .fill{
+                            fill: $mcq-icon-fill !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+  

@@ -1,0 +1,169 @@
+/**************************************************************************************************************************
+DROPDOWN MENU
+***************************************************************************************************************************/
+
+.dropdown-mnu {
+    a.toggle {
+        overflow: hidden;
+        position: relative;
+        display: block;
+        height: 40px;
+        width: 40px;
+        &:hover svg
+        {
+          
+        }
+    }
+}
+
+.dropdown-mnu-items {
+    pointer-events: none;
+    position: absolute;    
+    top: calc(100% + 10px);
+    background-color: #fff;
+    width: 100%;
+    right: -50%;    
+    margin: 0;
+    height:calc(100vh + 120px);
+    list-style: none inside none;    
+    box-sizing: border-box;    
+    transition: right 0.6s ease;
+    transform: translate(100%, 0);
+    z-index: 1;
+
+    &::after {     
+        content: "";
+        display: block;
+        position: absolute;         
+        height:0vh;
+        width: 0vw;   
+        display: block;
+        top: 0px;
+        right:0;
+        transition: opacity 0.3s;
+        opacity: 0;
+              
+    }
+    
+
+    &.in {
+        pointer-events:all;                
+        right: 100%;         
+    }
+
+  
+
+    li {
+        display: block;        
+        float: none;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        padding: 0;
+        margin: .2rem;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        a {
+            &:hover{
+                color: $apg-shade-3 !important; 
+                text-decoration: underline;;
+                background-color: #fff !important;
+            }
+        }        
+        
+        
+    }
+
+    &.no-hover-effect li {
+        background: #fff;
+    }
+
+    li a {
+        text-align: right;
+        display: block;
+        color: #{$primary-text-colour};
+        text-decoration: none;
+        padding: 0.9rem 2rem;
+      
+    }
+
+    li div {
+        overflow: hidden;
+        position: relative;
+        height: 30px;
+        width: 38px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 17px;
+        margin-right: 2px;
+    }
+
+    .mnu-item-progress {
+        display: none;
+    }
+
+
+    .mnu-item-location {
+        display: none;
+        line-height: normal;
+        padding: 10px;
+        font-size: 16px;
+        font-size: 1.6rem;
+        text-align: left;
+        text-transform: uppercase;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    li {
+        &.mnu-item-module-menu,
+        &.mnu-item-topics-menu {
+            display: none;
+        }
+    }
+}
+
+.progress-modal-enabled .dropdown-mnu-items .mnu-item-progress {
+    display: block;
+}
+
+.show-module-menu-item .dropdown-mnu-items li.mnu-item-module-menu, 
+.show-topic-menu-item .dropdown-mnu-items li.mnu-item-topics-menu {
+    display: list-item;
+}
+
+@media (min-width: 576px) {
+    .dropdown-mnu-items {
+        width:  400px; 
+        max-width: 400px;       
+        &.in
+        {
+            right: 400px; 
+            &::after {                                                                                          
+                opacity: 1;  
+                height:100vh;
+                width: 500vw;   
+                right: 400px;   
+                opacity: 1; 
+                background-color: rgba($apg-shade-2, 0.8);    
+            }
+      
+        }
+
+        li {
+            width: 100%;
+            display: block;
+            
+        }
+    }
+}

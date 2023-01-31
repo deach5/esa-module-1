@@ -1,0 +1,58 @@
+header.masthead {
+  background: $masthead-bg;
+  color: $body-color;
+}
+
+.bg-shade-1{
+  background: rgb(255, 255, 255);
+}
+.bg-shade-2{
+  background: rgb(245, 245, 245);
+}
+.bg-shade-3{
+  background: rgb(235, 235, 235);
+}
+.bg-shade-4{
+  background: rgb(225, 225, 225);
+}
+.bg-shade-5{
+  background: rgb(215, 215, 215);
+}
+.bg-shade-6{
+  background: rgb(205, 205, 205);
+}
+.dropdown-mnu-items{
+  
+  padding: 0;
+}
+.dropdown-mnu-items li {
+  background: $dropdown-bg;
+}
+.dropdown-mnu-items li a {
+    
+  color: $dropdown-color;
+  font-size: 1.25rem;
+  font-weight: 500;
+  &:hover {
+    color: #fff;
+    background-color: $apg-shade-1;
+  }
+}
+
+p:last-of-type {
+  /* margin-bottom: 0; */
+}
+
+#page-course-menu .dropdown-mnu-items li {
+  max-width: none;
+  min-width: 260px;
+}
+
+/*.dropdown-mnu-items li.mnu-item-resources { display: none; }*/
+
+.modal.intro-page .modal-header {
+  background: #b1dff4;
+}
+
+
+

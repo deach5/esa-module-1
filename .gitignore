@@ -1,0 +1,16 @@
+# ignore build requirements
+node_modules/
+css/
+.vscode/
+*.sublime*
+*.pyc
+locations.py
+.taters.json
+# ignore built files
+css/styles.css
+package-lock.json
+package/
+content/images/icons.svg
+content/pages/_
+js/bootstrap.min.js
+js/functions.min.js

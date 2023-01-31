@@ -1,0 +1,87 @@
+<div class="menu-page">
+    
+        <div class="menu-holder menu-content">
+            
+                <div class="dropshadow-container">
+                    <img src="content/images/menu/menu-image.jpg" class="img-fluid dropshadow dark" alt="">  
+                </div>          
+                    
+                    <div class="right">
+                        <div class="row">
+                            <div class="col-12" ><p class="instruction"><strong>Select</strong> the first activity to continue.</p></div>
+                            <div class="col-12 topic-mnu-item" >
+                                <button type="button" class="menu-btn btn btn-primary" data-navigate="topic 0">
+                                    What is explicit teaching?
+                                    <svg class="icon next-topic" role="img" aria-label="Next topic" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 28.455 35.603">
+                                        <use href="content/images/icons.svg#icon-mnu-next" xlink:href="content/images/icons.svg#icon-mnu-next" />
+                                    </svg>
+                                    <svg class="icon locked" role="img" aria-label="Locked" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.455 35.603">
+                                        <use href="content/images/icons.svg#icon-mnu-locked" xlink:href="content/images/icons.svg#icon-mnu-locked" />
+                                    </svg>
+                                    <svg class="icon complete" role="img" aria-label="Complete!" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.4 15.4">
+                                        <use href="content/images/icons.svg#icon-tick" xlink:href="content/images/icons.svg#icon-tick"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="col-12 topic-mnu-item">
+                                <button type="button" class="menu-btn btn btn-primary" data-navigate="topic 1">
+                                    The essential components of explicit teaching
+                                    <svg class="icon next-topic" role="img" aria-label="Next topic" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 28.455 35.603">
+                                        <use href="content/images/icons.svg#icon-mnu-next" xlink:href="content/images/icons.svg#icon-mnu-next" />
+                                    </svg>
+                                    <svg class="icon locked" role="img" aria-label="Locked" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.455 35.603">
+                                        <use href="content/images/icons.svg#icon-mnu-locked" xlink:href="content/images/icons.svg#icon-mnu-locked" />
+                                    </svg>
+                                    <svg class="icon complete" role="img" aria-label="Complete!" focusable="false" role="presentation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.4 15.4">
+                                        <use href="content/images/icons.svg#icon-tick" xlink:href="content/images/icons.svg#icon-tick"/>
+                                    </svg>
+                                </button>
+    
+                            </div>
+                        </div>
+                    </div>             
+   
+
+                
+            
+        </div>
+
+
+        <div class="modal" id="modal-1" aria-labelledby="modal1-heading" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <h2 id="modal1-heading">Learning intentions</h2>
+
+                        <p>This module will demonstrate how explicit teaching can be used as a way to develop <span class="tooltip-link" data-toggle="tooltip" data-placement="top" title="A practice where all students of all capabilities have the opportunity to grow and learn.">inclusive practices</span>, <span class="tooltip-link" data-toggle="tooltip" data-placement="top" title="A students’ capacity to set targets, reflect on these and take ownership to realise the targets.">student agency</span>,
+                            mathematical dialogue, regular feedback, and <span class="tooltip-link" data-toggle="tooltip" data-placement="top" title="Teaching student’s skills and strategies that assist them to think deeply to find solutions and focus on methodology rather than just the answer">cognitive activation</span> strategies.</p>
+                        <p>In this module you will:</p>
+                        <ul>
+                            <li>develop an understanding of how explicit teaching can be used to enhance their practice and knowledge of students</li>
+                            <li>explore the seven key components which are considered essential in teaching and learning.</li>
+                        </ul>
+
+                        <h2 class="pt-2">Success criteria</h2>                   
+                        <p>After completing Module 1 teachers will demonstrate their understanding by reflecting on the key components and by brainstorming ways to embed the seven components into their planning documentation and practice.</p>
+                        
+                        <p class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary btn-big" data-dismiss="modal">LET’S GO</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+<script>
+    function pageLoaded() {
+        $('[data-toggle="tooltip"]').tooltip().attr('tabindex','0');;
+        if($('.menu-btn.complete').length === 0) $('#modal-1').modal().show()
+    }
+</script>

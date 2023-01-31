@@ -1,0 +1,55 @@
+@import "../../node_modules/owl.carousel/src/scss/owl.carousel";
+.carousel-controls{
+    text-align: right;
+}
+.carousel-indicators
+{
+    position: static;
+    margin-bottom: 0;
+    transform: none;
+    margin-top: 10px;
+}
+.carousel-indicators li
+{
+    width: 1rem;
+    height: 1rem;
+    background: #BEBABA;
+    border: 0;
+    opacity: 1;
+    border-radius: 50%;
+    &.active
+    {
+        background: $primary;
+    }
+}
+.carousel-question
+{
+    .carousel-item
+    {
+        min-height: 500px;
+    }
+}
+.carousel-controls {
+    display: flex;
+}
+.carousel-controls {
+    svg {
+        width: 16px;
+    }
+}
+[data-activity="slide-container"] a[data-slide],
+[data-activity="slide-container"] button[data-slide],
+.carousel-controls a[data-slide],
+.carousel-controls button[data-slide] {
+    position: relative;        
+    padding: 0;
+    margin: 0 1rem;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+}
+[data-activity="slide-container"] a[data-slide],
+.carousel-controls a[data-slide] {
+    font-size: 0;
+    text-indent: -10000px;
+}

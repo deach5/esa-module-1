@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="60" viewBox="0 0 46 60">
+  <defs>
+    <clipPath id="clip-responses">
+      <rect width="46" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="responses" clip-path="url(#clip-responses)">
+    <g id="Group_1309" data-name="Group 1309" transform="translate(-1679 -578)">
+      <path id="Rectangle_2025" data-name="Rectangle 2025" d="M5,5V55H40V5H5M0,0H45V60H0Z" transform="translate(1679 578)" fill="#0e1d42"/>
+      <path id="Path_5086" data-name="Path 5086" d="M0,0H12V12L0,24-12,12Z" transform="translate(1712 578)" fill="#fff"/>
+      <path id="Icon_awesome-pen" data-name="Icon awesome-pen" d="M12.208,3.915l5.376,5.376L5.911,20.964l-4.793.529A1.008,1.008,0,0,1,.006,20.38l.533-4.8L12.208,3.915Zm8.7-.8L18.384.591a2.017,2.017,0,0,0-2.852,0L13.158,2.966l5.376,5.376,2.375-2.375a2.017,2.017,0,0,0,0-2.852Z" transform="translate(1702.501 578)" fill="#0e1d42"/>
+      <rect id="Rectangle_2025-2" data-name="Rectangle 2025" width="27" height="5" transform="translate(1688 624)" fill="#0e1d42"/>
+      <rect id="Rectangle_2026" data-name="Rectangle 2026" width="27" height="5" transform="translate(1688 615)" fill="#0e1d42"/>
+      <rect id="Rectangle_2027" data-name="Rectangle 2027" width="27" height="5" transform="translate(1688 606)" fill="#0e1d42"/>
+      <rect id="Rectangle_2028" data-name="Rectangle 2028" width="11" height="5" transform="translate(1688 597)" fill="#0e1d42"/>
+    </g>
+  </g>
+</svg>

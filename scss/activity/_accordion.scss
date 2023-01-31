@@ -1,0 +1,176 @@
+.accordion {
+
+    margin: 1rem auto;
+    width: 100%;
+
+
+    .card {      
+        background: $white;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        border: 2px $apg-shade-2 solid;
+        background-color: $apg-shade-2 ;
+        border-bottom: 0;
+        border-radius: 0;
+        &:last-child{
+            border-bottom: 2px $apg-shade-2 solid;
+        }
+
+        .first {
+            margin-top: 2rem;
+        }
+
+        .card-header {
+            border: 0;
+            position: relative;
+            margin: 0;
+            transition: color 0.2s;
+            padding: 0;            
+            
+
+            button {
+                background: $primary;
+                font-family: $light-font-family;
+                border: 0;         
+                font-size: 2rem;         
+                padding: 20px 40px 20px 84px;
+                width: 100%;
+                background-image: url("../content/images/icons/accordion-arrow-collapsed.svg");
+                background-repeat: no-repeat;
+                background-position: 20px 50%;
+
+                h3{
+                    color: #fff;
+                }
+
+                &.collapsed {
+                   
+                    background-image: url("../content/images/icons/accordion-arrow-collapsed.svg");
+
+                    &:hover,
+                    &:focus {
+                        background-image: url("../content/images/icons/accordion-arrow-collapsed-done.svg");
+
+                    }
+                }
+
+                .done-indicator.gfx {
+                    position: absolute;
+                    right: 22px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 26px;
+                    height: 26px;
+
+                    use {
+                        stroke: $white;
+                        transition: stroke 0.2s;
+                    }
+                }
+
+                &[aria-expanded="true"],
+                &:hover,
+                &:focus {
+                    background-color: #fff;                  
+                    text-decoration: none;
+                    h3{
+                        color: $apg-shade-1; 
+                    }
+
+                    &::before {
+                        color: inherit;
+                    }
+
+                    .done-indicator.gfx use {
+                        stroke: white;
+                    }
+                }
+
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                    background-image: url("../content/images/icons/accordion-arrow-collapsed.svg");
+                }
+            }
+
+            &:not(.item-done) {                
+            .done-indicator {
+                display: none;
+            }
+        }
+
+            &.item-done{
+                button{
+               // background-color: #fff;              
+                h3{
+             //       color: $apg-shade-1;
+                }
+                background-image: url("../content/images/icons/accordion-arrow-expanded-done.svg");
+                &.collapsed {
+                    background-image: url("../content/images/icons/accordion-arrow-collapsed.svg");
+                    &:hover,
+                    &:focus {
+                        background-image: url("../content/images/icons/accordion-arrow-collapsed-hover-done.svg");
+
+                    }
+                }
+                }
+                
+            }
+
+        }
+
+        .card-body {
+
+            background-color: #fff;
+            
+            border: 0;         
+            padding: 1.25rem 2rem;
+            margin-top: -1px;
+            h3{
+                font-size: 1.8rem;
+                padding-bottom: 1rem;
+            }
+
+            >div {
+                padding: 15px;
+                border-left: 2px $apg-shade-6 solid;
+
+                @media (min-width: 768px) {
+                    padding: 22px;
+                }
+
+                @media (min-width: 992px) {
+                    padding: 22px 60px;
+                }
+
+                >p:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+
+        &:last-of-type {
+
+            [aria-expanded="true"],
+            &:hover {
+                border-bottom-color: #243746;
+            }
+
+            .card-header {
+                border-bottom-color: rgba(255, 255, 255, 0);
+            }
+        }
+    }
+
+    &.reduced-padding {
+        .card-body {
+            >div {
+                @media (min-width: 768px) {
+                    padding: 22px 0px 22px 22px;
+                }
+            }
+        }
+    }
+}
